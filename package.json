@@ -1,7 +1,7 @@
 {
-  "name": "typescript-repo-template",
+  "name": "@polymeshassociation/hashicorp-vault-signing-manager",
   "version": "0.0.0",
-  "description": "Template repository for typescript projects",
+  "description": "A Polymesh SDK signing manager for using private keys in a Hashicorp Vault transit engine",
   "types": "dist/index.d.ts",
   "author": "Polymesh Association",
   "license": "ISC",
@@ -18,9 +18,9 @@
     "@commitlint/cli": "17.5.1",
     "@commitlint/config-conventional": "17.4.4",
     "@golevelup/ts-jest": "^0.5.6",
-    "@types/jest-when": "^3.5.5",
     "@semantic-release/changelog": "^6.0.3",
     "@types/jest": "27.4.0",
+    "@types/jest-when": "^3.5.5",
     "@types/node": "18.15.11",
     "@typescript-eslint/eslint-plugin": "5.57.0",
     "@typescript-eslint/parser": "5.57.0",
@@ -57,5 +57,15 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@polymeshassociation/signing-manager-types": "^3.3.0",
+    "cross-fetch": "^4.0.0",
+    "@polkadot/api": "^11.2.1",
+    "tslib": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
   }
 }

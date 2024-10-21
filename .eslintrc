@@ -21,8 +21,8 @@
   "plugins": ["@typescript-eslint", "simple-import-sort", "node", "import", "prettier", "promise"],
   "parserOptions": {
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.eslint.json"
   },
   "extends": ["standard", "semistandard", "plugin:@typescript-eslint/recommended", "prettier"],
-  "ignorePatterns": ["src/polkadot/", "src/middleware/", "docs/*"]
+  "ignorePatterns": ["src/polkadot/", "src/middleware/", "docs/*"],
 }

@@ -1,2 +1,3 @@
-// Happy Coding!
-console.log('Polymesh Rocks!');
+/* istanbul ignore file */
+
+export { HashicorpVaultSigningManager } from './lib/hashicorp-vault-signing-manager';
