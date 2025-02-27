@@ -36,7 +36,7 @@ export class VaultSigner implements PolkadotSigner {
       version,
     });
 
-    return this.signData(name, keyVersion, signablePayload.toU8a(true)).catch(error => {
+    return this.signData(name, keyVersion, signablePayload.toU8a(true)).catch((error) => {
       this.clearAddressCache(address);
       throw error;
     });
@@ -50,7 +50,7 @@ export class VaultSigner implements PolkadotSigner {
 
     const { name, version } = await this.getVaultKey(address);
 
-    return this.signData(name, version, hexToU8a(data)).catch(error => {
+    return this.signData(name, version, hexToU8a(data)).catch((error) => {
       this.clearAddressCache(address);
       throw error;
     });
@@ -123,8 +123,8 @@ export class VaultSigner implements PolkadotSigner {
   }
 }
 export class HashicorpVaultSigningManager implements SigningManager {
-  private externalSigner: VaultSigner;
-  private vault: HashicorpVault;
+  private readonly externalSigner: VaultSigner;
+  private readonly vault: HashicorpVault;
   private _ss58Format?: number;
 
   /**
@@ -132,14 +132,15 @@ export class HashicorpVaultSigningManager implements SigningManager {
    *
    * @param args.url - points to where the Vault's transit engine is hosted (usually `<base-url>/v1/transit`)
    * @param args.token - authentication token used for signing
+   * @param args.namespace - optional namespace value to be used (required only when using Vault Enterprise or HCP Vault Dedicated cluster. Read more - https://developer.hashicorp.com/vault/api-docs#namespaces)
    */
-  public constructor(args: { url: string; token: string }) {
-    const { url, token } = args;
+  public constructor(args: { url: string; token: string; namespace?: string }) {
+    const { url, token, namespace } = args;
 
     const registry = new TypeRegistry();
     registry.setSignedExtensions(signedExtensions);
 
-    this.vault = new HashicorpVault(url, token);
+    this.vault = new HashicorpVault(url, token, namespace);
     this.externalSigner = new VaultSigner(this.vault, registry);
   }
 
@@ -178,7 +179,7 @@ export class HashicorpVaultSigningManager implements SigningManager {
   public async getVaultKeys(): Promise<AddressedVaultKey[]> {
     const ss58Format = this.getSs58Format('getVaultKeys');
     const keys = await this.vault.fetchAllKeys();
-    return keys.map(key => ({
+    return keys.map((key) => ({
       ...key,
       address: encodeAddress(key.publicKey, ss58Format),
     }));
