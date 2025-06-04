@@ -1708,10 +1708,12 @@
     tslib "^2.6.2"
     ws "^8.15.1"
 
-"@polymeshassociation/signing-manager-types@3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@polymeshassociation/signing-manager-types/-/signing-manager-types-3.3.0.tgz#ca727b0cde19a0082920a17b231be29b17f60dec"
-  integrity sha512-pcnr4XW20htefMDIYnOgOTxPTVspb64DHK0WZFMT7u8ALqtcpN2lgm1XpaMcqCJ+ERWiVgKRvwc6V2AXHhP/ng==
+"@polymeshassociation/signing-manager-types@3.4.2-beta.2":
+  version "3.4.2-beta.2"
+  resolved "https://registry.yarnpkg.com/@polymeshassociation/signing-manager-types/-/signing-manager-types-3.4.2-beta.2.tgz#bb020d115bbd636702998157696ee4c4b3f96747"
+  integrity sha512-7fbHOdHWEC3gIB9wVH1MI8MxV0puK0ZjgwSgjTN5Zx/TTj5zch6+IMqsFLWHOwM4iluZX9z8kIxIZg7Z2+O69g==
+  dependencies:
+    "@polkadot/api" "11.2.1"
 
 "@prettier/eslint@npm:prettier-eslint@^15.0.1":
   version "15.0.1"

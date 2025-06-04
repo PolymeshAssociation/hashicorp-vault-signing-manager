@@ -59,13 +59,13 @@
     "access": "public"
   },
   "dependencies": {
-    "@polymeshassociation/signing-manager-types": "3.3.0",
+    "@polymeshassociation/signing-manager-types": "3.4.2-beta.2",
     "cross-fetch": "^4.0.0",
     "@polkadot/api": "11.2.1",
     "tslib": "^2.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
+    "url": "git+https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
   }
 }
