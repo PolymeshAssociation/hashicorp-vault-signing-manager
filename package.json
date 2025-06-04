@@ -66,6 +66,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
+    "url": "git+https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
   }
 }
