@@ -21,7 +21,8 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "lib": ["es2017", "dom"],
-    "typeRoots": ["./node_modules/@types", "./src/typings"]
+    "typeRoots": ["./node_modules/@types", "./src/typings"],
+    "types": ["@types/jest"]
   },
   "exclude": ["dist", "node_modules", "**/__tests__"]
 }
