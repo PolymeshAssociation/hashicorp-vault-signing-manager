@@ -44,7 +44,7 @@
     "prettier": "2.8.7",
     "prettier-eslint": "15.0.1",
     "prettier-eslint-cli": "7.1.0",
-    "semantic-release": "21.0.0",
+    "semantic-release": "^25.0.3",
     "ts-jest": "^29.1.0",
     "ttypescript": "1.5.15",
     "typedoc": "0.23.18",
@@ -59,13 +59,14 @@
     "access": "public"
   },
   "dependencies": {
+    "@polkadot/api": "^11.2.1",
     "@polymeshassociation/signing-manager-types": "^3.3.0",
     "cross-fetch": "^4.0.0",
-    "@polkadot/api": "^11.2.1",
     "tslib": "^2.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
-  }
+  },
+  "packageManager": "yarn@4.12.0"
 }
