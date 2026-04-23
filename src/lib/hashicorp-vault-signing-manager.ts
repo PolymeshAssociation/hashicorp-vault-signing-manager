@@ -5,6 +5,7 @@ import { blake2AsU8a, decodeAddress, encodeAddress } from '@polkadot/util-crypto
 import {
   PolkadotSigner,
   signedExtensions,
+  signedExtensionTypes,
   SigningManager,
 } from '@polymeshassociation/signing-manager-types';
 
@@ -138,7 +139,7 @@ export class HashicorpVaultSigningManager implements SigningManager {
     const { url, token, namespace } = args;
 
     const registry = new TypeRegistry();
-    registry.setSignedExtensions(signedExtensions);
+    registry.setSignedExtensions(signedExtensions, signedExtensionTypes);
 
     this.vault = new HashicorpVault(url, token, namespace);
     this.externalSigner = new VaultSigner(this.vault, registry);

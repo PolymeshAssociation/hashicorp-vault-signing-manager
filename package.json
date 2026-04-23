@@ -60,7 +60,7 @@
   },
   "dependencies": {
     "@polkadot/api": "16.5.2",
-    "@polymeshassociation/signing-manager-types": "^3.5.0",
+    "@polymeshassociation/signing-manager-types": "^3.7.1",
     "cross-fetch": "^4.0.0",
     "tslib": "^2.0.0"
   },
@@ -68,5 +68,5 @@
     "type": "git",
     "url": "https://github.com/PolymeshAssociation/hashicorp-vault-signing-manager.git"
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.14.1"
 }
